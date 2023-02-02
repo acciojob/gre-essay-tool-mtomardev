@@ -7,10 +7,33 @@
 </head>
 
 <body>
+	<!-- <input type="text" id="evaluatedText" > -->
+	<!-- <h1> Word Counter</h1> -->
+	<textarea id="evaluatedText" cols="50" rows="10"></textarea><br>
+	<h3 id="wordCount">0</h3></span> 
+	
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- <script type="text/javascript" src="./script.js">
+</script> -->
+<script>
+	let textarea = document.getElementById('evaluatedText');
+	let heading = document.getElementById('wordCount');
 
+	textarea.addEventListener("input", countword);
+
+	function countword(){
+		
+		let word = textarea.value //to access text area words
+		let name = word.trim() //removing extra words from left and right
+		
+		let count = name.split(' ') //accesing in betwenn spaces
+		
+		heading.innerHTML = count.length  //adding lenth to heading
+		
+	}
+
+
+</script>
 </body>
 
 </html>
